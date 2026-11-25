@@ -29,6 +29,8 @@ function App() {
 
       <button onClick={buscar}>Buscar</button>
 
+      <hr />
+
       {cidade && (
         <div>
           <h2>{cidade.name}</h2>
