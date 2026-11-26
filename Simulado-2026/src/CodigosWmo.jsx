@@ -1,4 +1,3 @@
-
 export const codigosWmo = [
   { codigo: 0, descricao: "Céu limpo", icone: "☀️" },
   { codigo: 1, descricao: "Predominantemente limpo", icone: "🌤️" },
@@ -26,6 +25,15 @@ export const codigosWmo = [
 export function getDescricaoWmo(codigo) {
   const item = codigosWmo.find(item => item.codigo === codigo)
   return item ? item.descricao : "Código WMO desconhecido"
+}
+
+export function getInfoWmo(codigo) {
+  return (
+    codigosWmo.find(item => item.codigo === codigo) || {
+      descricao: "Desconhecido",
+      icone: "🌡️"
+    }
+  )
 }
 
 export default codigosWmo
